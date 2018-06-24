@@ -1,4 +1,4 @@
-// Package udigits provides integer conversions for all UNICODE digits.
+// Package udigit provides integer conversions for all UNICODE digits.
 // The standard Go package routines, notably strconv.Atoi(), only work
 // on digits in the ASCII range.
 package udigit
@@ -102,7 +102,7 @@ func Udtoi(r rune) int {
 	return -1
 }
 
-// IsDigit() acts as unicode.IsDigit() but is faster for many inputs.
+// IsDigit acts as unicode.IsDigit() but is faster for many inputs.
 func IsDigit(r rune) bool {
 	return Udtoi(r) != -1
 }
